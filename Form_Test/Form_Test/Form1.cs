@@ -13,23 +13,13 @@ namespace Form_Test
     public partial class Form1 : Form
     { // constをつけると初期化時にのみ値の変更が可能になる
 
-        /// <summary>
-        /// ボタンの横幅
-        /// </summary>
+      
         const int BUTTON_SIZE_X = 100;
-        /// <summary>
-        /// ボタンの縦
-        /// </summary>
+  
         const int BUTTON_SIZE_Y = 100;
-
-
-        /// <summary>
-        /// ボタンが横に何個並ぶか
-        /// </summary>
+ 
         const int BOARD_SIZE_X = 3;
-        /// <summary>
-        /// ボタンが縦に何個並ぶか
-        /// </summary>
+   
         const int BOARD_SIZE_Y = 3;
 
         private TestButton[,] _buttonArray;
@@ -47,9 +37,9 @@ namespace Form_Test
                 for (int j = 0; j < BOARD_SIZE_Y; j++)
                 {
                     // インスタンスの生成
-                    TestButton testButton = new TestButton(this,
-                        new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j),
-                        new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "");
+                    TestButton testButton = new TestButton(this,i,j,
+                        new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y),
+                        "");
 
                     // 配列にボタンの参照を追加
                     _buttonArray[j, i] = testButton;
@@ -58,11 +48,15 @@ namespace Form_Test
                     Controls.Add(testButton);
                 }
             }
-            GetTextButton(1,1).SetEnable(true);
-        }    
-
-        public TestButton GetTextButton(int x, int y) 
+            GetTestButton(0,0).SetEnable(false);
+        }
+  
+        public TestButton GetTestButton(int x, int y) 
         {
+            //配列外参照
+            if (x < 0 || x >= BOARD_SIZE_X) return null;
+            if (y < 0 || y >= BOARD_SIZE_Y) return null;
+
             return _buttonArray[y, x];
         }
 
