@@ -1,0 +1,11 @@
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\bin\Debug\Form_Test.exe.config
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\bin\Debug\Form_Test.exe
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\bin\Debug\Form_Test.pdb
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\obj\Debug\Form_Test.csproj.AssemblyReference.cache
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\obj\Debug\Form_Test.Form1.resources
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\obj\Debug\Form_Test.Properties.Resources.resources
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\obj\Debug\Form_Test.csproj.GenerateResource.cache
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\obj\Debug\Form_Test.csproj.CoreCompileInputs.cache
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\obj\Debug\Form_Test.exe
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\obj\Debug\Form_Test.pdb
+C:\Users\rusty\OneDrive\Desktop\Form\Form_Test\Form_Test\obj\Debug\Form_Test.exe.config

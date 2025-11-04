@@ -4,12 +4,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.LinkLabel;
 
 namespace Form_Test
 {
-    internal class TestButton : Button
+    public class TestButton : Button
     {
         /// <summary>onの時の色</summary>
         private Color _onColor = Color.LightBlue;
@@ -20,6 +21,7 @@ namespace Form_Test
         /// <summary>現在OnかOffか</summary>
         private bool _enable;
 
+        private Form1 _form1;
 
         /// <summary>onとoffの設定</summary> 
         /// <param name="on"></param>
@@ -35,8 +37,11 @@ namespace Form_Test
                 BackColor = _offColor;
             }
         }
-        public TestButton(Point position, Size size, string text)
+        public TestButton(Form1 form1,Point position, Size size, string text)
         {
+            //Form1の参照を保管
+            _form1 = form1;
+
             // ボタンの位置を設定
             Location = position;
             // ボタンの大きさを設定
@@ -50,7 +55,7 @@ namespace Form_Test
         }
         private void ClickEvent(object sender, EventArgs e)
         {
-            SetEnable(!_enable);
+            _form1.GetTextButton(1,1).SetEnable(true);
         }
     }
 }

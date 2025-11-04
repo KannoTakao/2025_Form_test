@@ -34,9 +34,11 @@ namespace Form_Test
 
         private TestButton[,] _buttonArray;
 
+
         public Form1()
         {
             InitializeComponent();
+
             //_buttonArrayの初期化
             _buttonArray = new TestButton[BOARD_SIZE_Y, BOARD_SIZE_X];
 
@@ -45,7 +47,9 @@ namespace Form_Test
                 for (int j = 0; j < BOARD_SIZE_Y; j++)
                 {
                     // インスタンスの生成
-                    TestButton testButton = new TestButton(new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j), new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "");
+                    TestButton testButton = new TestButton(this,
+                        new Point(BUTTON_SIZE_X * i, BUTTON_SIZE_Y * j),
+                        new Size(BUTTON_SIZE_X, BUTTON_SIZE_Y), "");
 
                     // 配列にボタンの参照を追加
                     _buttonArray[j, i] = testButton;
@@ -54,8 +58,12 @@ namespace Form_Test
                     Controls.Add(testButton);
                 }
             }
+            GetTextButton(1,1).SetEnable(true);
+        }    
 
-            _buttonArray[1, 0].SetEnable(true);
+        public TestButton GetTextButton(int x, int y) 
+        {
+            return _buttonArray[y, x];
         }
 
         private void Form1_Load(object sender, EventArgs e)
